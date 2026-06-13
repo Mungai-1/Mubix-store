@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mubix Technologies – Premium Tech in Nairobi</title>
+  <meta name="description" content="Browse premium laptops, networking, CCTV, gaming and more. Inquire via WhatsApp."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, sans-serif; background: #F8FAFF; color: #0A1628; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea, select { font-family: inherit; }
+
+/* ── Pages ── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ── Layout ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 52px 0; }
+
+/* ── Header ── */
+.header { background: #0A1628; position: sticky; top: 0; z-index: 900; box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 16px; }
+.logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg,#0066FF,#00C6FF); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.logo-name { font-weight: 900; font-size: 15px; color: #fff; letter-spacing: -0.3px; }
+.logo-sub { font-size: 8px; color: #64748B; letter-spacing: 1.5px; margin-top: -2px; }
+.nav { display: flex; gap: 4px; align-items: center; }
+.nav-link { color: #94A3B8; font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 8px; border-bottom: 2px solid transparent; transition: color 0.15s; cursor: pointer; }
+.nav-link:hover, .nav-link.active { color: #fff; border-bottom-color: #0066FF; }
+.basket-btn { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 6px 14px; color: #fff; font-size: 14px; font-weight: 700; transition: background 0.2s; cursor: pointer; border: none; }
+.basket-btn:hover { background: #0066FF; }
+.basket-count { background: #FF4757; border-radius: 50%; min-width: 20px; height: 20px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; }
+.hamburger { display: none; background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 20px; padding: 6px 10px; border-radius: 8px; }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+
+/* ── Hero ── */
+.hero { background: linear-gradient(135deg, #0A1628 0%, #0D2147 60%, #0A1628 100%); padding: 72px 24px 80px; color: #fff; position: relative; overflow: hidden; text-align: center; }
+.hero-glow { position: absolute; border-radius: 50%; pointer-events: none; }
+.hero-glow-1 { top: -80px; right: -80px; width: 320px; height: 320px; background: radial-gradient(circle, rgba(0,102,255,0.2) 0%, transparent 70%); }
+.hero-glow-2 { bottom: -60px; left: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(0,198,255,0.15) 0%, transparent 70%); }
+.hero-content { position: relative; max-width: 680px; margin: 0 auto; }
+.hero-badge { display: inline-block; background: rgba(0,102,255,0.2); border: 1px solid rgba(0,102,255,0.4); border-radius: 20px; padding: 5px 14px; font-size: 11px; font-weight: 700; color: #60AFFF; margin-bottom: 20px; letter-spacing: 0.5px; }
+.hero-title { font-size: clamp(28px,6vw,48px); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
+.gradient-text { background: linear-gradient(90deg,#0066FF,#00C6FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-desc { font-size: 15px; color: #94A3B8; line-height: 1.6; max-width: 500px; margin: 0 auto 32px; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+/* ── Buttons ── */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 24px; border-radius: 12px; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: opacity 0.15s, transform 0.1s; }
+.btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-primary { background: #0066FF; color: #fff; }
+.btn-danger { background: #EF4444; color: #fff; }
+.btn-whatsapp { background: #25D366; color: #fff; }
+.btn-outline { background: transparent; color: #0066FF; border: 1.5px solid #0066FF; }
+.btn-full { width: 100%; }
+.btn-sm { padding: 8px 14px; font-size: 12px; border-radius: 10px; }
+.btn-xs { padding: 5px 10px; font-size: 11px; border-radius: 8px; }
+
+/* ── Stats bar ── */
+.stats-bar { background: #fff; border-bottom: 1px solid #E8EEF8; padding: 20px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 8px; }
+.stat { text-align: center; padding: 12px 8px; }
+.stat-val { font-size: 22px; font-weight: 900; color: #0066FF; }
+.stat-lbl { font-size: 11px; color: #64748B; font-weight: 600; margin-top: 2px; }
+
+/* ── Section header ── */
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+.section-title { font-size: 22px; font-weight: 900; }
+
+/* ── Product grid ── */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 18px; }
+.product-card { background: #fff; border-radius: 16px; border: 1px solid #E8EEF8; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.2s; }
+.product-card:hover { box-shadow: 0 8px 28px rgba(0,102,255,0.12); transform: translateY(-2px); }
+.card-img { background: linear-gradient(135deg,#EEF4FF,#F0F7FF); height: 130px; display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+.card-img .card-emoji { position: relative; z-index: 1; }
+.card-check { position: absolute; top: 10px; right: 10px; background: #0066FF; color: #fff; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; z-index: 2; }
+.card-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.card-name { font-size: 13px; font-weight: 800; color: #0A1628; line-height: 1.3; }
+.card-desc { font-size: 12px; color: #64748B; line-height: 1.5; }
+.card-price { font-size: 16px; font-weight: 900; color: #0066FF; }
+.card-actions { display: flex; flex-direction: column; gap: 8px; margin-top: auto; padding-top: 10px; }
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 20px; font-size: 10px; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+.badge-in { background: #D1FAE5; color: #065F46; }
+.badge-out { background: #FEE2E2; color: #991B1B; }
+.specs-toggle { font-size: 12px; color: #0066FF; }
+.specs-toggle summary { cursor: pointer; font-weight: 600; list-style: none; }
+.specs-toggle summary::before { content: '▼ '; font-size: 9px; }
+.specs-toggle[open] summary::before { content: '▲ '; }
+.specs-list { padding-left: 16px; margin-top: 6px; color: #334155; }
+.specs-list li { margin-bottom: 3px; }
+
+/* ── Filter bar ── */
+.filter-bar { margin-bottom: 14px; }
+.search-wrap { position: relative; }
+.search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 15px; }
+.search-input { width: 100%; padding: 12px 14px 12px 42px; border-radius: 12px; border: 1.5px solid #E2E8F0; font-size: 14px; outline: none; background: #fff; font-family: inherit; }
+.search-input:focus { border-color: #0066FF; }
+.cat-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; margin-top: 12px; }
+.cat-pill { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; border: 1.5px solid #E2E8F0; background: #fff; color: #64748B; cursor: pointer; transition: all 0.15s; }
+.cat-pill.active, .cat-pill:hover { background: #0066FF; color: #fff; border-color: #0066FF; }
+.results-count { font-size: 13px; color: #64748B; margin-bottom: 16px; }
+.no-results { text-align: center; padding: 60px 20px; color: #94A3B8; }
+
+/* ── How it works ── */
+.how-section { background: #fff; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 24px; }
+.step { text-align: center; padding: 24px 16px; }
+.step-icon { font-size: 36px; margin-bottom: 12px; }
+.step h3 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+.step p { font-size: 13px; color: #64748B; line-height: 1.6; }
+
+/* ── CTA box ── */
+.cta-box { background: linear-gradient(135deg,#0066FF,#0052CC); border-radius: 24px; padding: 48px 32px; text-align: center; color: #fff; }
+.cta-box h2 { font-size: 26px; font-weight: 900; margin-bottom: 10px; }
+.cta-box p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 24px; }
+
+/* ── Page hero (inner pages) ── */
+.page-hero { background: #0A1628; color: #fff; padding: 48px 24px; }
+.page-hero h1 { font-size: clamp(22px,4vw,36px); font-weight: 900; margin-bottom: 8px; }
+.page-hero p { color: #94A3B8; font-size: 14px; }
+
+/* ── Basket page ── */
+.basket-layout { display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: flex-start; }
+.basket-item { display: flex; align-items: center; gap: 14px; background: #fff; border-radius: 14px; padding: 16px; border: 1px solid #E8EEF8; margin-bottom: 12px; }
+.basket-item-icon { font-size: 32px; flex-shrink: 0; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px; background: #EEF4FF; }
+.basket-item-icon img { width: 100%; height: 100%; object-fit: cover; }
+.basket-item-info { flex: 1; min-width: 0; }
+.basket-item-name { font-size: 14px; font-weight: 800; color: #0A1628; margin-bottom: 3px; }
+.basket-item-cat { font-size: 11px; color: #94A3B8; margin-bottom: 4px; }
+.basket-item-price { font-size: 14px; font-weight: 700; color: #0066FF; }
+.basket-item-controls { display: flex; align-items: center; gap: 10px; }
+.qty-btn { width: 28px; height: 28px; border-radius: 8px; border: 1.5px solid #E2E8F0; background: #F8FAFF; font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-weight: 700; }
+.qty-val { font-size: 14px; font-weight: 800; min-width: 20px; text-align: center; }
+.remove-btn { background: #FEE2E2; border: none; border-radius: 8px; padding: 7px 10px; color: #DC2626; font-size: 15px; cursor: pointer; }
+.summary-card { background: #fff; border-radius: 16px; border: 1px solid #E8EEF8; padding: 24px; position: sticky; top: 80px; display: flex; flex-direction: column; gap: 14px; }
+.summary-card h3 { font-size: 17px; font-weight: 900; }
+.summary-list { display: flex; flex-direction: column; gap: 6px; }
+.summary-row { font-size: 13px; color: #334155; padding: 6px 0; border-bottom: 1px solid #F1F5F9; }
+.summary-divider { border: none; border-top: 1px solid #E8EEF8; }
+.summary-note { font-size: 12px; color: #64748B; line-height: 1.5; background: #F8FAFF; border-radius: 10px; padding: 10px 12px; }
+.message-preview-box { background: #F0FFF4; border: 1px solid #A7F3D0; border-radius: 12px; padding: 14px; }
+.preview-label { font-size: 11px; font-weight: 800; color: #065F46; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.preview-text { font-size: 11px; color: #1E293B; white-space: pre-wrap; font-family: inherit; line-height: 1.6; }
+.empty-state { text-align: center; padding: 60px 20px; color: #94A3B8; }
+
+/* ── Services page ── */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 20px; }
+.service-card { background: #fff; border-radius: 18px; padding: 28px; border: 1px solid #E8EEF8; display: flex; flex-direction: column; gap: 12px; }
+.service-icon { font-size: 36px; }
+.service-card h3 { font-size: 16px; font-weight: 800; color: #0A1628; }
+.service-card p { font-size: 13px; color: #64748B; line-height: 1.6; flex: 1; }
+
+/* ── Contact page ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: flex-start; }
+.contact-cards { display: flex; flex-direction: column; gap: 14px; }
+.contact-card { display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 14px; padding: 18px 20px; border: 1px solid #E8EEF8; }
+.contact-icon { width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.contact-label { font-size: 10px; font-weight: 700; color: #94A3B8; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 3px; }
+.contact-val { font-size: 14px; font-weight: 700; color: #0A1628; word-break: break-all; }
+.social-block { background: #fff; border-radius: 14px; padding: 18px 20px; border: 1px solid #E8EEF8; }
+.social-block h4 { font-size: 13px; font-weight: 800; margin-bottom: 12px; }
+.social-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-btn { display: flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 10px; color: #fff; font-size: 13px; font-weight: 700; }
+.inquiry-panel { background: #fff; border-radius: 18px; padding: 28px; border: 1px solid #E8EEF8; }
+.inquiry-panel h3 { font-size: 17px; font-weight: 900; margin-bottom: 6px; }
+.inquiry-panel p { font-size: 13px; color: #64748B; margin-bottom: 20px; }
+.inquiry-form { display: flex; flex-direction: column; gap: 12px; }
+.form-input { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1.5px solid #E2E8F0; font-size: 13px; font-family: inherit; outline: none; }
+.form-input:focus { border-color: #0066FF; }
+.form-textarea { resize: vertical; min-height: 100px; }
+
+/* ── Footer ── */
+.footer { background: #0A1628; color: #fff; padding: 52px 0 0; margin-top: 40px; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; padding-bottom: 40px; }
+.footer-brand p { font-size: 13px; color: #64748B; margin-top: 12px; line-height: 1.6; max-width: 260px; }
+.footer-links, .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+.footer-links h4, .footer-contact h4 { font-size: 12px; font-weight: 800; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+.footer-links a, .footer-contact a { font-size: 13px; color: #CBD5E1; cursor: pointer; }
+.footer-links a:hover, .footer-contact a:hover { color: #fff; }
+.footer-bottom { border-top: 1px solid #1E293B; padding: 16px 0; font-size: 12px; color: #64748B; }
+
+/* ── Admin Panel ── */
+.admin-header { background: #0A1628; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0066FF; }
+.admin-header h2 { font-size: 16px; font-weight: 800; }
+.admin-layout { display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 62px); }
+.admin-sidebar { background: #fff; border-right: 1px solid #E8EEF8; padding: 20px 0; }
+.admin-nav-item { display: flex; align-items: center; gap: 10px; padding: 12px 20px; font-size: 13px; font-weight: 600; color: #64748B; cursor: pointer; transition: all 0.15s; border-left: 3px solid transparent; }
+.admin-nav-item:hover { background: #F8FAFF; color: #0A1628; }
+.admin-nav-item.active { background: #EEF4FF; color: #0066FF; border-left-color: #0066FF; }
+.admin-nav-item .nav-icon { font-size: 18px; }
+.admin-content { padding: 28px; background: #F8FAFF; }
+.admin-section { display: none; }
+.admin-section.active { display: block; }
+.admin-section-title { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+.admin-section-sub { font-size: 13px; color: #64748B; margin-bottom: 24px; }
+
+/* Admin Stats */
+.admin-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 16px; margin-bottom: 28px; }
+.admin-stat-card { background: #fff; border-radius: 14px; padding: 20px; border: 1px solid #E8EEF8; }
+.admin-stat-val { font-size: 28px; font-weight: 900; color: #0066FF; }
+.admin-stat-lbl { font-size: 12px; color: #64748B; margin-top: 4px; }
+
+/* Admin Product Table */
+.admin-table-wrap { background: #fff; border-radius: 14px; border: 1px solid #E8EEF8; overflow: hidden; }
+.admin-table-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid #E8EEF8; }
+.admin-table-header h3 { font-size: 15px; font-weight: 800; }
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table th { text-align: left; padding: 12px 16px; font-size: 11px; font-weight: 800; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; background: #F8FAFF; border-bottom: 1px solid #E8EEF8; }
+.admin-table td { padding: 14px 16px; font-size: 13px; border-bottom: 1px solid #F1F5F9; vertical-align: middle; }
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: #FAFBFF; }
+.admin-product-thumb { width: 44px; height: 44px; border-radius: 8px; background: #EEF4FF; display: flex; align-items: center; justify-content: center; font-size: 22px; overflow: hidden; flex-shrink: 0; }
+.admin-product-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.admin-product-info { display: flex; align-items: center; gap: 10px; }
+.admin-product-name { font-weight: 700; }
+.admin-product-cat { font-size: 11px; color: #94A3B8; }
+.admin-actions { display: flex; gap: 6px; }
+.toggle-avail { padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; }
+.toggle-avail.in { background: #D1FAE5; color: #065F46; }
+.toggle-avail.out { background: #FEE2E2; color: #991B1B; }
+
+/* Admin Form / Modal */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.open { display: flex; }
+.modal { background: #fff; border-radius: 20px; width: 100%; max-width: 580px; max-height: 90vh; overflow-y: auto; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; border-bottom: 1px solid #E8EEF8; }
+.modal-header h3 { font-size: 17px; font-weight: 900; }
+.modal-close { background: none; border: none; font-size: 22px; color: #94A3B8; cursor: pointer; line-height: 1; }
+.modal-body { padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 12px; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.4px; }
+.form-control { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1.5px solid #E2E8F0; font-size: 13px; font-family: inherit; outline: none; }
+.form-control:focus { border-color: #0066FF; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-textarea { resize: vertical; min-height: 80px; }
+.specs-input-list { display: flex; flex-direction: column; gap: 6px; }
+.spec-row { display: flex; gap: 6px; align-items: center; }
+.spec-row input { flex: 1; }
+.remove-spec { background: #FEE2E2; border: none; border-radius: 6px; padding: 4px 8px; color: #DC2626; cursor: pointer; font-size: 14px; }
+.add-spec-btn { align-self: flex-start; font-size: 12px; padding: 6px 12px; margin-top: 4px; }
+.thumb-preview { width: 80px; height: 80px; border-radius: 10px; background: #EEF4FF; display: flex; align-items: center; justify-content: center; font-size: 36px; overflow: hidden; border: 2px dashed #E2E8F0; }
+.thumb-preview img { width: 100%; height: 100%; object-fit: cover; }
+.thumb-row { display: flex; align-items: center; gap: 14px; }
+.thumb-actions { display: flex; flex-direction: column; gap: 6px; }
+.modal-footer { padding: 16px 24px; border-top: 1px solid #E8EEF8; display: flex; gap: 10px; justify-content: flex-end; }
+.url-input-wrap { display: flex; gap: 8px; }
+.url-input-wrap input { flex: 1; }
+.url-input-wrap button { white-space: nowrap; }
+
+/* Admin login */
+.admin-login { min-height: calc(100vh - 62px); display: flex; align-items: center; justify-content: center; background: #F8FAFF; padding: 20px; }
+.admin-login-card { background: #fff; border-radius: 20px; padding: 40px 36px; max-width: 380px; width: 100%; border: 1px solid #E8EEF8; text-align: center; }
+.admin-login-icon { font-size: 40px; margin-bottom: 16px; }
+.admin-login-card h2 { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+.admin-login-card p { font-size: 13px; color: #64748B; margin-bottom: 24px; }
+.admin-login-form { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.admin-error { background: #FEE2E2; color: #991B1B; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 600; display: none; }
+
+/* Toast */
+.toast { position: fixed; bottom: 24px; right: 24px; background: #0A1628; color: #fff; border-radius: 12px; padding: 12px 20px; font-size: 13px; font-weight: 600; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.3s; }
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .nav { display: none; position: absolute; top: 62px; left: 0; right: 0; background: #0A1628; flex-direction: column; padding: 16px 20px; gap: 4px; border-top: 1px solid #1E293B; z-index: 800; }
+  .nav.open { display: flex; }
+  .hamburger { display: block; }
+  .header-actions { gap: 8px; }
+  .basket-layout { grid-template-columns: 1fr; }
+  .summary-card { position: static; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  .hero { padding: 48px 16px 60px; }
+  .section { padding: 36px 0; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .cta-box { padding: 32px 20px; }
+  .cta-box h2 { font-size: 20px; }
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <div class="logo-name">MUBIX</div>
+        <div class="logo-sub">TECHNOLOGIES</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <span class="nav-link" id="nav-home" onclick="showPage('home')">Home</span>
+      <span class="nav-link" id="nav-products" onclick="showPage('products')">Products</span>
+      <span class="nav-link" id="nav-services" onclick="showPage('services')">Services</span>
+      <span class="nav-link" id="nav-contact" onclick="showPage('contact')">Contact</span>
+    </nav>
+    <div class="header-actions">
+      <button class="basket-btn" onclick="showPage('basket')">
+        🛒 <span class="basket-count" id="basketCount" style="display:none">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">🇰🇪 NAIROBI'S TRUSTED TECH PARTNER</div>
+      <h1 class="hero-title">Premium Technology<br><span class="gradient-text">For Every Need</span></h1>
+      <p class="hero-desc">Browse our catalogue, add items to your basket, and send a WhatsApp inquiry directly to our sales team for pricing and availability confirmation.</p>
+      <div class="hero-btns">
+        <button onclick="showPage('products')" class="btn btn-primary">Browse Products →</button>
+        <a href="https://wa.me/254793778741" target="_blank" class="btn btn-whatsapp">💬 Chat with Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat"><div class="stat-val" id="totalProductsStat">0</div><div class="stat-lbl">Products</div></div>
+      <div class="stat"><div class="stat-val">7</div><div class="stat-lbl">Categories</div></div>
+      <div class="stat"><div class="stat-val">Fast</div><div class="stat-lbl">WhatsApp Response</div></div>
+      <div class="stat"><div class="stat-val">Nairobi</div><div class="stat-lbl">Based</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <button onclick="showPage('products')" class="btn btn-outline">View All →</button>
+      </div>
+      <div class="products-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <section class="section how-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;margin-bottom:40px">How It Works</h2>
+      <div class="steps-grid">
+        <div class="step"><div class="step-icon">🔍</div><h3>1. Browse</h3><p>Explore our catalogue of laptops, networking, CCTV, gaming gear and more.</p></div>
+        <div class="step"><div class="step-icon">🛒</div><h3>2. Add to Basket</h3><p>Select the products you're interested in and add them to your inquiry basket.</p></div>
+        <div class="step"><div class="step-icon">💬</div><h3>3. WhatsApp Inquiry</h3><p>Send your basket as a WhatsApp message. Our team confirms availability and pricing.</p></div>
+        <div class="step"><div class="step-icon">✅</div><h3>4. Purchase</h3><p>Agree on price and delivery with our sales team and complete your purchase.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Need Help Choosing?</h2>
+        <p>Our sales team is ready to help you find the right solution for your budget and needs.</p>
+        <a href="https://wa.me/254793778741" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo" onclick="showPage('home')"><div class="logo-icon">⚡</div><div><div class="logo-name">MUBIX</div><div class="logo-sub">TECHNOLOGIES</div></div></div>
+        <p>Premium technology products and IT services in Nairobi, Kenya.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a onclick="showPage('products')">Products</a>
+        <a onclick="showPage('services')">Services</a>
+        <a onclick="showPage('contact')">Contact</a>
+        <a onclick="showPage('basket')">My Basket</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="https://wa.me/254793778741" target="_blank">📲 +254 793 778 741</a>
+        <a href="mailto:mubixtechologies@gmail.com">📧 mubixtechologies@gmail.com</a>
+        <a href="https://facebook.com/MubixTechnologies" target="_blank">Facebook</a>
+        <a href="https://instagram.com/mubixtech" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 Mubix Technologies. All rights reserved. · <span style="cursor:pointer;color:#475569" onclick="showAdminLogin()">Admin</span></div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: PRODUCTS
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-products">
+  <div class="page-hero">
+    <div class="container">
+      <h1>Product Catalogue</h1>
+      <p>Browse our full range of technology products. Add to basket and send a WhatsApp inquiry.</p>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products..." oninput="filterProducts()"/>
+        </div>
+      </div>
+      <div class="cat-pills" id="catPills"></div>
+      <div class="results-count" id="resultsCount"></div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div id="noResults" class="no-results" style="display:none">
+        <div style="font-size:40px;margin-bottom:12px">🔍</div>
+        <p>No products found. Try a different search or category.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo" onclick="showPage('home')"><div class="logo-icon">⚡</div><div><div class="logo-name">MUBIX</div><div class="logo-sub">TECHNOLOGIES</div></div></div>
+        <p>Premium technology products and IT services in Nairobi, Kenya.</p>
+      </div>
+      <div class="footer-links"><h4>Quick Links</h4><a onclick="showPage('products')">Products</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a><a onclick="showPage('basket')">My Basket</a></div>
+      <div class="footer-contact"><h4>Contact</h4><a href="https://wa.me/254793778741" target="_blank">📲 +254 793 778 741</a><a href="mailto:mubixtechologies@gmail.com">📧 mubixtechologies@gmail.com</a></div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 Mubix Technologies. All rights reserved.</div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: SERVICES
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="container"><h1>Our Services</h1><p>Professional IT services delivered by our expert team across Nairobi and beyond.</p></div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">📷</div><h3>CCTV Installation</h3><p>Professional installation of HD/IP surveillance systems for homes, offices, and commercial premises. Includes network configuration and remote viewing setup.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20CCTV%20Installation%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+        <div class="service-card"><div class="service-icon">🌐</div><h3>Network Solutions</h3><p>Design and deployment of wired and wireless networks. From home setups to enterprise-grade infrastructure with full cabling and configuration.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20Network%20Solutions%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+        <div class="service-card"><div class="service-icon">🛠️</div><h3>IT Support & Maintenance</h3><p>Ongoing IT support, hardware repairs, software troubleshooting, and preventive maintenance for businesses and individuals.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20IT%20Support%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+        <div class="service-card"><div class="service-icon">🖥️</div><h3>System Installation</h3><p>Complete workstation setup, OS installation, software configuration, and domain/server setup for business environments.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20System%20Installation%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+        <div class="service-card"><div class="service-icon">☀️</div><h3>Solar Solutions</h3><p>Supply and installation of solar power systems — from small domestic setups to large commercial installations with monitoring systems.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20Solar%20Solutions%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+        <div class="service-card"><div class="service-icon">🔒</div><h3>Access Control Systems</h3><p>Installation of biometric access control, electric gate systems, and door access management for secure and controlled premises.</p><a href="https://wa.me/254793778741?text=Hello%20Mubix%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20Access%20Control%20Systems%20service." target="_blank" class="btn btn-whatsapp">📲 Request via WhatsApp</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="container"><div class="cta-box"><h2>Not Sure Which Service You Need?</h2><p>Talk to our team and we'll recommend the right solution for you.</p><a href="https://wa.me/254793778741" target="_blank" class="btn btn-whatsapp">💬 WhatsApp Our Team</a></div></div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><div class="logo" onclick="showPage('home')"><div class="logo-icon">⚡</div><div><div class="logo-name">MUBIX</div><div class="logo-sub">TECHNOLOGIES</div></div></div><p>Premium technology products and IT services in Nairobi, Kenya.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a onclick="showPage('products')">Products</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a><a onclick="showPage('basket')">My Basket</a></div>
+      <div class="footer-contact"><h4>Contact</h4><a href="https://wa.me/254793778741" target="_blank">📲 +254 793 778 741</a><a href="mailto:mubixtechologies@gmail.com">📧 mubixtechologies@gmail.com</a></div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 Mubix Technologies. All rights reserved.</div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero"><div class="container"><h1>Contact Us</h1><p>We respond fastest via WhatsApp. Reach out for products, services, or general inquiries.</p></div></div>
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a href="https://wa.me/254793778741" target="_blank" class="contact-card"><div class="contact-icon" style="background:#D1FAE5;color:#065F46">📲</div><div><div class="contact-label">WhatsApp (Fastest)</div><div class="contact-val">+254 793 778 741</div></div></a>
+          <a href="tel:+254793778741" class="contact-card"><div class="contact-icon" style="background:#DBEAFE;color:#1E40AF">📞</div><div><div class="contact-label">Phone</div><div class="contact-val">+254 793 778 741</div></div></a>
+          <a href="mailto:mubixtechologies@gmail.com" class="contact-card"><div class="contact-icon" style="background:#EDE9FE;color:#5B21B6">📧</div><div><div class="contact-label">Email</div><div class="contact-val">mubixtechologies@gmail.com</div></div></a>
+          <div class="contact-card"><div class="contact-icon" style="background:#FEE2E2;color:#991B1B">📍</div><div><div class="contact-label">Location</div><div class="contact-val">Nairobi, Kenya</div></div></div>
+          <div class="social-block"><h4>Follow Us</h4><div class="social-links"><a href="https://facebook.com/MubixTechnologies" target="_blank" class="social-btn" style="background:#1877F2"><span>f</span> Facebook</a><a href="https://instagram.com/mubixtech" target="_blank" class="social-btn" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">📷 Instagram</a></div></div>
+        </div>
+        <div class="inquiry-panel">
+          <h3>Send a Quick Inquiry</h3>
+          <p>Fill in below and we'll generate a WhatsApp message for you.</p>
+          <div class="inquiry-form">
+            <input type="text" id="inquiryName" placeholder="Your Name" class="form-input"/>
+            <input type="text" id="inquiryProduct" placeholder="Product or service you're interested in" class="form-input"/>
+            <textarea id="inquiryMsg" placeholder="Any additional details..." class="form-input form-textarea"></textarea>
+            <button onclick="sendInquiry()" class="btn btn-whatsapp btn-full">💬 Send via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><div class="logo" onclick="showPage('home')"><div class="logo-icon">⚡</div><div><div class="logo-name">MUBIX</div><div class="logo-sub">TECHNOLOGIES</div></div></div><p>Premium technology products and IT services in Nairobi, Kenya.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a onclick="showPage('products')">Products</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a><a onclick="showPage('basket')">My Basket</a></div>
+      <div class="footer-contact"><h4>Contact</h4><a href="https://wa.me/254793778741" target="_blank">📲 +254 793 778 741</a><a href="mailto:mubixtechologies@gmail.com">📧 mubixtechologies@gmail.com</a></div>
+    </div>
+    <div class="footer-bottom"><div class="container">© 2026 Mubix Technologies. All rights reserved.</div></div>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: BASKET
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-basket">
+  <div class="page-hero"><div class="container"><h1>📋 Inquiry Basket</h1><p>Review your selected items, then send a single WhatsApp inquiry to our sales team.</p></div></div>
+  <section class="section">
+    <div class="container basket-layout" id="basketLayout">
+      <div id="basketItems"></div>
+      <div class="basket-summary">
+        <div class="summary-card">
+          <h3>Inquiry Summary</h3>
+          <div id="summaryList" class="summary-list"></div>
+          <hr class="summary-divider"/>
+          <p class="summary-note">💡 Prices are indicative. Our team will confirm final pricing and availability via WhatsApp.</p>
+          <div class="message-preview-box" id="messagePreview" style="display:none"><div class="preview-label">📄 Message Preview</div><pre id="previewText" class="preview-text"></pre></div>
+          <a href="#" id="whatsappBtn" class="btn btn-whatsapp btn-full" style="display:none">💬 Send Inquiry via WhatsApp</a>
+          <button onclick="showPage('products')" class="btn btn-outline btn-full">← Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+    <div id="emptyState" class="container empty-state" style="display:none">
+      <div style="font-size:60px;margin-bottom:16px">🛒</div>
+      <h2>Your basket is empty</h2>
+      <p>Browse our catalogue and add products you're interested in.</p>
+      <button onclick="showPage('products')" class="btn btn-primary" style="margin-top:16px">Browse Products →</button>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: ADMIN LOGIN
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-admin-login">
+  <div class="admin-login">
+    <div class="admin-login-card">
+      <div class="admin-login-icon">🔐</div>
+      <h2>Admin Panel</h2>
+      <p>Enter your credentials to manage products and inventory.</p>
+      <div class="admin-error" id="loginError">Incorrect password. Try again.</div>
+      <div class="admin-login-form">
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" id="adminPassword" class="form-control" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')adminLogin()"/>
+        </div>
+        <button onclick="adminLogin()" class="btn btn-primary btn-full">Sign In →</button>
+        <button onclick="showPage('home')" class="btn btn-outline btn-full">← Back to Site</button>
+      </div>
+      <p style="font-size:11px;color:#94A3B8;margin-top:16px">Default password: <strong>mubix2026</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PAGE: ADMIN DASHBOARD
+════════════════════════════════════════════════════════════════ -->
+<div class="page" id="page-admin">
+  <div class="admin-header">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="logo-icon" style="width:30px;height:30px;font-size:14px">⚡</div>
+      <h2>Mubix Admin Panel</h2>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button onclick="showPage('home')" class="btn btn-outline btn-sm">← View Site</button>
+      <button onclick="adminLogout()" class="btn btn-sm" style="background:#1E293B;color:#94A3B8">Sign Out</button>
+    </div>
+  </div>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-nav-item active" onclick="showAdminSection('dashboard')" id="anav-dashboard">
+        <span class="nav-icon">📊</span> Dashboard
+      </div>
+      <div class="admin-nav-item" onclick="showAdminSection('products')" id="anav-products">
+        <span class="nav-icon">📦</span> Products
+      </div>
+      <div class="admin-nav-item" onclick="showAdminSection('add')" id="anav-add">
+        <span class="nav-icon">➕</span> Add Product
+      </div>
+    </aside>
+    <div class="admin-content">
+
+      <!-- Dashboard -->
+      <div class="admin-section active" id="asec-dashboard">
+        <h2 class="admin-section-title">Dashboard</h2>
+        <p class="admin-section-sub">Overview of your product catalogue.</p>
+        <div class="admin-stats" id="adminStats"></div>
+        <div class="admin-table-wrap">
+          <div class="admin-table-header">
+            <h3>Recent Products</h3>
+            <button onclick="showAdminSection('products')" class="btn btn-outline btn-sm">View All</button>
+          </div>
+          <div style="overflow-x:auto"><table class="admin-table" id="dashRecentTable"><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Status</th></tr></thead><tbody id="dashRecentBody"></tbody></table></div>
+        </div>
+      </div>
+
+      <!-- Products list -->
+      <div class="admin-section" id="asec-products">
+        <h2 class="admin-section-title">All Products</h2>
+        <p class="admin-section-sub">Manage your product catalogue — edit thumbnails, details, and availability.</p>
+        <div class="admin-table-wrap">
+          <div class="admin-table-header">
+            <h3 id="adminProductCount">Products</h3>
+            <button onclick="showAdminSection('add')" class="btn btn-primary btn-sm">+ Add Product</button>
+          </div>
+          <div style="overflow-x:auto"><table class="admin-table"><thead><tr><th>Product</th><th>Category</th><th>Price (KES)</th><th>Status</th><th>Actions</th></tr></thead><tbody id="adminProductsBody"></tbody></table></div>
+        </div>
+      </div>
+
+      <!-- Add Product -->
+      <div class="admin-section" id="asec-add">
+        <h2 class="admin-section-title" id="addFormTitle">Add New Product</h2>
+        <p class="admin-section-sub">Fill in the product details. Thumbnail can be a URL or emoji.</p>
+        <div style="background:#fff;border-radius:16px;border:1px solid #E8EEF8;padding:28px;max-width:640px">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="form-group">
+              <label class="form-label">Product Name *</label>
+              <input type="text" id="af-name" class="form-control" placeholder="e.g. HP EliteBook 840 G10"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Category *</label>
+                <select id="af-category" class="form-control">
+                  <option value="">Select category…</option>
+                  <option>Computers &amp; Laptops</option>
+                  <option>Networking</option>
+                  <option>CCTV &amp; Security</option>
+                  <option>Gaming</option>
+                  <option>Accessories</option>
+                  <option>Solar Solutions</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Price (KES)</label>
+                <input type="number" id="af-price" class="form-control" placeholder="e.g. 45000"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <textarea id="af-desc" class="form-control form-textarea" placeholder="Short product description…"></textarea>
+            </div>
+            <!-- Thumbnail -->
+            <div class="form-group">
+              <label class="form-label">Thumbnail</label>
+              <div class="thumb-row">
+                <div class="thumb-preview" id="af-thumb-preview"><span id="af-thumb-emoji">📦</span></div>
+                <div class="thumb-actions">
+                  <div class="url-input-wrap">
+                    <input type="text" id="af-thumb-url" class="form-control" placeholder="Paste image URL…" oninput="previewThumb()"/>
+                    <button class="btn btn-outline btn-sm" onclick="previewThumb()">Preview</button>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:8px;margin-top:4px">
+                    <span style="font-size:12px;color:#64748B">or emoji:</span>
+                    <input type="text" id="af-emoji" class="form-control" style="width:80px" placeholder="💻" oninput="previewEmoji()"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Specs -->
+            <div class="form-group">
+              <label class="form-label">Specifications</label>
+              <div class="specs-input-list" id="af-specs-list">
+                <div class="spec-row"><input type="text" class="form-control spec-input" placeholder="e.g. Intel Core i7"/><button class="remove-spec" onclick="removeSpec(this)">✕</button></div>
+              </div>
+              <button class="btn btn-outline btn-sm add-spec-btn" onclick="addSpecRow()">+ Add Spec</button>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Availability</label>
+              <select id="af-available" class="form-control">
+                <option value="true">In Stock</option>
+                <option value="false">Out of Stock</option>
+              </select>
+            </div>
+            <input type="hidden" id="af-edit-id" value=""/>
+            <div style="display:flex;gap:10px;padding-top:8px">
+              <button onclick="saveProduct()" class="btn btn-primary" id="af-save-btn">Save Product</button>
+              <button onclick="resetAddForm()" class="btn btn-outline">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCRIPT
+════════════════════════════════════════════════════════════════ -->
+<script>
+/* ── Data ── */
+let PRODUCTS = JSON.parse(localStorage.getItem('mubix_products') || 'null') || [
+  { id:1, name:"HP EliteBook 840 G10", category:"Computers & Laptops", price:145000, available:true, icon:"💻", thumbnail:"",
+    description:"Business-grade ultrabook built for performance and security.",
+    specs:["Intel Core i7-1355U","16GB DDR5 RAM","512GB NVMe SSD","14\" FHD IPS Display","Windows 11 Pro"] },
+  { id:2, name:"Dell Latitude 5420", category:"Computers & Laptops", price:98000, available:true, icon:"💻", thumbnail:"",
+    description:"Reliable enterprise laptop with military-grade durability.",
+    specs:["Intel Core i5-1145G7","8GB RAM","256GB SSD","14\" FHD Display","Windows 11 Pro"] },
+  { id:3, name:"Lenovo ThinkPad X1 Carbon", category:"Computers & Laptops", price:185000, available:false, icon:"💻", thumbnail:"",
+    description:"Ultra-lightweight premium business laptop.",
+    specs:["Intel Core i7","16GB RAM","1TB SSD","14\" WUXGA IPS","Windows 11 Pro"] },
+  { id:4, name:"Mikrotik hEX RB750Gr3", category:"Networking", price:12500, available:true, icon:"🌐", thumbnail:"",
+    description:"5-port Gigabit Ethernet router for home and small office.",
+    specs:["5× Gigabit Ethernet","880MHz CPU","256MB RAM","RouterOS v7","USB Port"] },
+  { id:5, name:"Ubiquiti UniFi AP-AC Pro", category:"Networking", price:22000, available:true, icon:"📡", thumbnail:"",
+    description:"Enterprise Wi-Fi 5 access point with dual-band coverage.",
+    specs:["802.11ac Wave 2","Dual Band 2.4/5GHz","Up to 1300Mbps","PoE Powered","Ceiling Mount"] },
+  { id:6, name:"Hikvision 4MP Dome Camera", category:"CCTV & Security", price:18500, available:true, icon:"📷", thumbnail:"",
+    description:"4MP AcuSense outdoor fixed dome network camera.",
+    specs:["4MP Resolution","IR Range 40m","H.265+","IP67 Weatherproof","PoE Support"] },
+  { id:7, name:"Dahua 8CH NVR Kit", category:"CCTV & Security", price:75000, available:true, icon:"🔒", thumbnail:"",
+    description:"Complete 8-channel NVR security kit with cameras.",
+    specs:["8× 4MP IP Cameras","8-Channel NVR","2TB HDD Included","Remote Viewing","Night Vision"] },
+  { id:8, name:"Logitech G502 Hero Mouse", category:"Gaming", price:8500, available:true, icon:"🖱️", thumbnail:"",
+    description:"High performance gaming mouse with HERO sensor.",
+    specs:["25,600 DPI HERO Sensor","11 Programmable Buttons","RGB Lighting","Adjustable Weight","USB Wired"] },
+  { id:9, name:"HP OMEN 16 Gaming Laptop", category:"Gaming", price:175000, available:false, icon:"🎮", thumbnail:"",
+    description:"Purpose-built gaming laptop with advanced cooling.",
+    specs:["AMD Ryzen 7 7745HX","RTX 4060 8GB","16GB DDR5","512GB SSD","165Hz Display"] },
+  { id:10, name:"Logitech MX Keys Combo", category:"Accessories", price:18000, available:true, icon:"⌨️", thumbnail:"",
+    description:"Advanced wireless keyboard and mouse combo for professionals.",
+    specs:["Bluetooth + USB","Backlit Keys","MX Master 3S Mouse","Multi-device","USB-C Charging"] },
+  { id:11, name:"100W Solar Flood Light", category:"Solar Solutions", price:9800, available:true, icon:"☀️", thumbnail:"",
+    description:"All-in-one solar security floodlight with motion sensor.",
+    specs:["100W Panel","6000mAh Battery","PIR Motion Sensor","IP65 Waterproof","Auto On/Off"] },
+  { id:12, name:"Luminous Solar Inverter 3KVA", category:"Solar Solutions", price:145000, available:true, icon:"⚡", thumbnail:"",
+    description:"Complete solar power solution for home and office.",
+    specs:["3KVA Pure Sine Wave","2× 200Ah Batteries","4× 250W Panels","MPPT Controller","LCD Display"] },
+];
+
+const ADMIN_PASS = 'mubix2026';
+let adminLoggedIn = false;
+let activeProductPage = 'All';
+let editingId = null;
+
+function saveProducts() {
+  localStorage.setItem('mubix_products', JSON.stringify(PRODUCTS));
+}
+
+/* ── Basket ── */
+function getBasket() {
+  try { return JSON.parse(localStorage.getItem('mubix_basket') || '[]'); }
+  catch(e) { return []; }
+}
+function saveBasket(b) { localStorage.setItem('mubix_basket', JSON.stringify(b)); }
+function updateBasketCount() {
+  const t = getBasket().reduce((s,i) => s+i.qty, 0);
+  const el = document.getElementById('basketCount');
+  el.textContent = t;
+  el.style.display = t > 0 ? 'inline-flex' : 'none';
+}
+
+/* ── Render card ── */
+function thumbHtml(p) {
+  if (p.thumbnail) return `<img src="${p.thumbnail}" alt="${p.name}" onerror="this.style.display='none'"/><span class="card-emoji" style="${p.thumbnail?'display:none':''}">${p.icon||'📦'}</span>`;
+  return `<span class="card-emoji">${p.icon||'📦'}</span>`;
+}
+function renderCard(p) {
+  const inBasket = getBasket().some(i => i.id === p.id);
+  const specsHtml = (p.specs||[]).map(s => `<li>${s}</li>`).join('');
+  const waText = encodeURIComponent(`Hello Mubix Technologies,\n\nI would like to confirm availability for:\n\nProduct: ${p.name}\nQuantity: 1\n\nKindly provide availability, final pricing, and delivery details.`);
+  return `
+    <div class="product-card" id="card-${p.id}">
+      <div class="card-img">${thumbHtml(p)}${inBasket ? '<div class="card-check">✓</div>' : ''}</div>
+      <div class="card-body">
+        <div class="card-top">
+          <h3 class="card-name">${p.name}</h3>
+          <span class="badge ${p.available ? 'badge-in' : 'badge-out'}">${p.available ? '● In Stock' : '● Out of Stock'}</span>
+        </div>
+        <p class="card-desc">${p.description||''}</p>
+        ${p.price ? `<div class="card-price">KES ${p.price.toLocaleString()}</div>` : ''}
+        ${specsHtml ? `<details class="specs-toggle"><summary>View Specifications</summary><ul class="specs-list">${specsHtml}</ul></details>` : ''}
+        <div class="card-actions">
+          <a href="https://wa.me/254793778741?text=${waText}" target="_blank" class="btn btn-whatsapp btn-sm">📲 WhatsApp Inquiry</a>
+          ${p.available ? `<button class="btn ${inBasket?'btn-outline':'btn-primary'} btn-sm" onclick="toggleBasket(${p.id})">${inBasket?'✓ In Basket':'+ Add to Basket'}</button>` : ''}
+        </div>
+      </div>
+    </div>`;
+}
+
+function toggleBasket(id) {
+  const product = PRODUCTS.find(p => p.id === id);
+  if (!product) return;
+  const basket = getBasket();
+  const exists = basket.find(i => i.id === id);
+  if (exists) saveBasket(basket.filter(i => i.id !== id));
+  else saveBasket([...basket, {...product, qty:1}]);
+  updateBasketCount();
+  const cardEl = document.getElementById(`card-${id}`);
+  if (cardEl) { const t = document.createElement('div'); t.innerHTML = renderCard(product); cardEl.replaceWith(t.firstElementChild); }
+}
+
+/* ── Page routing ── */
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(`page-${page}`).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const navEl = document.getElementById(`nav-${page}`);
+  if (navEl) navEl.classList.add('active');
+  document.getElementById('nav').classList.remove('open');
+  window.scrollTo(0,0);
+
+  if (page === 'home') renderHome();
+  if (page === 'products') renderProducts();
+  if (page === 'basket') renderBasketPage();
+  if (page === 'admin') { if (!adminLoggedIn) { showPage('admin-login'); return; } renderAdmin(); }
+}
+
+function showAdminLogin() { showPage('admin-login'); }
+
+/* ── Home ── */
+function renderHome() {
+  const featured = PRODUCTS.filter(p => p.available).slice(0,4);
+  document.getElementById('featuredGrid').innerHTML = featured.map(renderCard).join('');
+  document.getElementById('totalProductsStat').textContent = PRODUCTS.length + '+';
+  updateBasketCount();
+}
+
+/* ── Products ── */
+const CATEGORIES = ['All','Computers & Laptops','Networking','CCTV & Security','Gaming','Accessories','Solar Solutions'];
+
+function renderProducts() {
+  const pillsEl = document.getElementById('catPills');
+  pillsEl.innerHTML = CATEGORIES.map(c =>
+    `<button class="cat-pill ${c===activeProductPage?'active':''}" onclick="setCategory('${c}')">${c}</button>`
+  ).join('');
+  filterProducts();
+  updateBasketCount();
+}
+
+function setCategory(cat) {
+  activeProductPage = cat;
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.toggle('active', p.textContent===cat));
+  filterProducts();
+}
+
+function filterProducts() {
+  const q = (document.getElementById('searchInput')?.value||'').toLowerCase();
+  const filtered = PRODUCTS.filter(p => {
+    const matchCat = activeProductPage==='All' || p.category===activeProductPage;
+    const matchQ = p.name.toLowerCase().includes(q) || (p.category||'').toLowerCase().includes(q) || (p.description||'').toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+  const grid = document.getElementById('productsGrid');
+  const noRes = document.getElementById('noResults');
+  document.getElementById('resultsCount').textContent = `${filtered.length} product${filtered.length!==1?'s':''} found`;
+  if (filtered.length===0) { grid.innerHTML=''; noRes.style.display='block'; }
+  else { noRes.style.display='none'; grid.innerHTML=filtered.map(renderCard).join(''); }
+}
+
+/* ── Basket page ── */
+function renderBasketPage() {
+  const basket = getBasket();
+  const itemsEl = document.getElementById('basketItems');
+  const emptyEl = document.getElementById('emptyState');
+  const layout  = document.getElementById('basketLayout');
+  updateBasketCount();
+
+  if (basket.length===0) {
+    layout.style.display='none'; emptyEl.style.display='block'; return;
+  }
+  emptyEl.style.display='none'; layout.style.display='grid';
+
+  itemsEl.innerHTML = basket.map(item => {
+    const thumbContent = item.thumbnail
+      ? `<img src="${item.thumbnail}" alt="${item.name}" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/><span style="display:none;font-size:22px">${item.icon||'📦'}</span>`
+      : `<span style="font-size:22px">${item.icon||'📦'}</span>`;
+    return `
+      <div class="basket-item" id="item-${item.id}">
+        <div class="basket-item-icon">${thumbContent}</div>
+        <div class="basket-item-info">
+          <div class="basket-item-name">${item.name}</div>
+          <div class="basket-item-cat">${item.category}</div>
+          ${item.price?`<div class="basket-item-price">KES ${item.price.toLocaleString()}</div>`:''}
+        </div>
+        <div class="basket-item-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button>
+          <span class="qty-val">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},1)">+</button>
+        </div>
+        <button class="remove-btn" onclick="removeItem(${item.id})">🗑</button>
+      </div>`;
+  }).join('');
+
+  document.getElementById('summaryList').innerHTML = basket.map(i =>
+    `<div class="summary-row"><span>${i.name} × ${i.qty}</span></div>`
+  ).join('');
+
+  const lines = basket.map(i=>`• ${i.name} × ${i.qty}`).join('\n');
+  const msg = `Hello Mubix Technologies,\n\nI would like to confirm availability and pricing for:\n\n${lines}\n\nKindly provide availability, final pricing, and delivery details.\n\nThank you.`;
+  document.getElementById('previewText').textContent = msg;
+  document.getElementById('messagePreview').style.display='block';
+  const waBtn = document.getElementById('whatsappBtn');
+  waBtn.href = `https://wa.me/254793778741?text=${encodeURIComponent(msg)}`;
+  waBtn.style.display='flex';
+}
+
+function changeQty(id, delta) {
+  const basket = getBasket();
+  const idx = basket.findIndex(i=>i.id===id);
+  if (idx===-1) return;
+  basket[idx].qty = Math.max(1, basket[idx].qty+delta);
+  saveBasket(basket); renderBasketPage();
+}
+function removeItem(id) { saveBasket(getBasket().filter(i=>i.id!==id)); renderBasketPage(); }
+
+/* ── Contact ── */
+function sendInquiry() {
+  const name = document.getElementById('inquiryName').value.trim()||'A customer';
+  const product = document.getElementById('inquiryProduct').value.trim()||'your products/services';
+  const msg = document.getElementById('inquiryMsg').value.trim();
+  const text = `Hello Mubix Technologies,\n\nMy name is ${name}.\n\nI am interested in: ${product}.\n${msg?'\nAdditional details: '+msg+'\n':''}\nPlease get in touch with me.\n\nThank you.`;
+  window.open(`https://wa.me/254793778741?text=${encodeURIComponent(text)}`,'_blank');
+}
+
+/* ── Admin auth ── */
+function adminLogin() {
+  const pw = document.getElementById('adminPassword').value;
+  if (pw===ADMIN_PASS) {
+    adminLoggedIn=true;
+    document.getElementById('adminPassword').value='';
+    document.getElementById('loginError').style.display='none';
+    showPage('admin');
+  } else {
+    document.getElementById('loginError').style.display='block';
+  }
+}
+function adminLogout() { adminLoggedIn=false; showPage('home'); }
+
+/* ── Admin render ── */
+function renderAdmin() {
+  renderAdminStats();
+  renderAdminProducts();
+  renderDashRecent();
+}
+
+function renderAdminStats() {
+  const total = PRODUCTS.length;
+  const inStock = PRODUCTS.filter(p=>p.available).length;
+  const cats = [...new Set(PRODUCTS.map(p=>p.category))].length;
+  document.getElementById('adminStats').innerHTML = `
+    <div class="admin-stat-card"><div class="admin-stat-val">${total}</div><div class="admin-stat-lbl">Total Products</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-val" style="color:#10B981">${inStock}</div><div class="admin-stat-lbl">In Stock</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-val" style="color:#EF4444">${total-inStock}</div><div class="admin-stat-lbl">Out of Stock</div></div>
+    <div class="admin-stat-card"><div class="admin-stat-val" style="color:#8B5CF6">${cats}</div><div class="admin-stat-lbl">Categories</div></div>`;
+}
+
+function thumbCell(p) {
+  if (p.thumbnail) return `<div class="admin-product-thumb"><img src="${p.thumbnail}" alt="" onerror="this.style.display='none';this.nextSibling.style.display='flex'"/><span style="display:none;font-size:22px">${p.icon||'📦'}</span></div>`;
+  return `<div class="admin-product-thumb"><span style="font-size:22px">${p.icon||'📦'}</span></div>`;
+}
+
+function renderAdminProducts() {
+  document.getElementById('adminProductCount').textContent = `${PRODUCTS.length} Products`;
+  document.getElementById('adminProductsBody').innerHTML = PRODUCTS.map(p => `
+    <tr>
+      <td>
+        <div class="admin-product-info">
+          ${thumbCell(p)}
+          <div>
+            <div class="admin-product-name">${p.name}</div>
+            <div class="admin-product-cat">${p.category}</div>
+          </div>
+        </div>
+      </td>
+      <td>${p.category}</td>
+      <td>${p.price ? 'KES '+p.price.toLocaleString() : '—'}</td>
+      <td><button class="toggle-avail ${p.available?'in':'out'}" onclick="toggleAvailability(${p.id})">${p.available?'● In Stock':'● Out of Stock'}</button></td>
+      <td>
+        <div class="admin-actions">
+          <button class="btn btn-outline btn-xs" onclick="editProduct(${p.id})">✏️ Edit</button>
+          <button class="btn btn-danger btn-xs" onclick="deleteProduct(${p.id})">🗑</button>
+        </div>
+      </td>
+    </tr>`).join('');
+}
+
+function renderDashRecent() {
+  document.getElementById('dashRecentBody').innerHTML = PRODUCTS.slice(-5).reverse().map(p => `
+    <tr>
+      <td><div class="admin-product-info">${thumbCell(p)}<div><div class="admin-product-name">${p.name}</div></div></div></td>
+      <td>${p.category}</td>
+      <td>${p.price?'KES '+p.price.toLocaleString():'—'}</td>
+      <td><span class="badge ${p.available?'badge-in':'badge-out'}">${p.available?'In Stock':'Out of Stock'}</span></td>
+    </tr>`).join('');
+}
+
+function toggleAvailability(id) {
+  const p = PRODUCTS.find(p=>p.id===id);
+  if (!p) return;
+  p.available = !p.available;
+  saveProducts();
+  renderAdminProducts();
+  renderAdminStats();
+  showToast(`${p.name} marked as ${p.available?'In Stock':'Out of Stock'}`);
+}
+
+function deleteProduct(id) {
+  const p = PRODUCTS.find(p=>p.id===id);
+  if (!p) return;
+  if (!confirm(`Delete "${p.name}"? This cannot be undone.`)) return;
+  PRODUCTS = PRODUCTS.filter(p=>p.id!==id);
+  saveProducts();
+  renderAdminProducts();
+  renderAdminStats();
+  renderDashRecent();
+  showToast('Product deleted');
+}
+
+/* ── Admin Sections ── */
+function showAdminSection(sec) {
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.admin-nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById(`asec-${sec}`).classList.add('active');
+  document.getElementById(`anav-${sec}`).classList.add('active');
+  if (sec==='products') renderAdminProducts();
+  if (sec==='dashboard') { renderAdminStats(); renderDashRecent(); }
+  if (sec==='add' && editingId===null) resetAddForm();
+}
+
+/* ── Add / Edit Product ── */
+function previewThumb() {
+  const url = document.getElementById('af-thumb-url').value.trim();
+  const preview = document.getElementById('af-thumb-preview');
+  if (url) {
+    const img = preview.querySelector('img') || document.createElement('img');
+    img.src = url;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover';
+    img.onerror = () => { img.remove(); };
+    const emojiEl = document.getElementById('af-thumb-emoji');
+    if (emojiEl) emojiEl.style.display='none';
+    if (!preview.contains(img)) preview.prepend(img);
+  }
+}
+
+function previewEmoji() {
+  const e = document.getElementById('af-emoji').value;
+  const emojiEl = document.getElementById('af-thumb-emoji');
+  if (emojiEl) emojiEl.textContent = e || '📦';
+  const url = document.getElementById('af-thumb-url').value.trim();
+  if (!url) { const img = document.getElementById('af-thumb-preview').querySelector('img'); if(img) img.remove(); }
+}
+
+function addSpecRow(val='') {
+  const list = document.getElementById('af-specs-list');
+  const row = document.createElement('div');
+  row.className = 'spec-row';
+  row.innerHTML = `<input type="text" class="form-control spec-input" placeholder="e.g. 16GB RAM" value="${val}"/><button class="remove-spec" onclick="removeSpec(this)">✕</button>`;
+  list.appendChild(row);
+}
+function removeSpec(btn) { btn.closest('.spec-row').remove(); }
+
+function resetAddForm() {
+  editingId = null;
+  document.getElementById('addFormTitle').textContent = 'Add New Product';
+  document.getElementById('af-save-btn').textContent = 'Save Product';
+  ['af-name','af-price','af-desc','af-thumb-url','af-emoji','af-edit-id'].forEach(id => {
+    const el = document.getElementById(id); if(el) el.value='';
+  });
+  document.getElementById('af-category').value='';
+  document.getElementById('af-available').value='true';
+  document.getElementById('af-specs-list').innerHTML = `<div class="spec-row"><input type="text" class="form-control spec-input" placeholder="e.g. Intel Core i7"/><button class="remove-spec" onclick="removeSpec(this)">✕</button></div>`;
+  document.getElementById('af-thumb-emoji').textContent='📦';
+  document.getElementById('af-thumb-emoji').style.display='';
+  const oldImg = document.getElementById('af-thumb-preview').querySelector('img');
+  if (oldImg) oldImg.remove();
+}
+
+function editProduct(id) {
+  const p = PRODUCTS.find(p=>p.id===id);
+  if (!p) return;
+  editingId = id;
+  showAdminSection('add');
+  document.getElementById('addFormTitle').textContent = 'Edit Product';
+  document.getElementById('af-save-btn').textContent = 'Update Product';
+  document.getElementById('af-name').value = p.name;
+  document.getElementById('af-category').value = p.category;
+  document.getElementById('af-price').value = p.price||'';
+  document.getElementById('af-desc').value = p.description||'';
+  document.getElementById('af-thumb-url').value = p.thumbnail||'';
+  document.getElementById('af-emoji').value = p.icon||'';
+  document.getElementById('af-available').value = p.available?'true':'false';
+  document.getElementById('af-edit-id').value = id;
+  // Specs
+  const list = document.getElementById('af-specs-list');
+  list.innerHTML='';
+  (p.specs||[]).forEach(s => addSpecRow(s));
+  if (!p.specs||p.specs.length===0) addSpecRow();
+  // Thumb preview
+  const emojiEl = document.getElementById('af-thumb-emoji');
+  emojiEl.textContent = p.icon||'📦';
+  if (p.thumbnail) {
+    const img = document.createElement('img');
+    img.src=p.thumbnail; img.style.cssText='width:100%;height:100%;object-fit:cover';
+    emojiEl.style.display='none';
+    document.getElementById('af-thumb-preview').prepend(img);
+  } else { emojiEl.style.display=''; }
+}
+
+function saveProduct() {
+  const name = document.getElementById('af-name').value.trim();
+  const category = document.getElementById('af-category').value;
+  if (!name) { showToast('Product name is required'); return; }
+  if (!category) { showToast('Please select a category'); return; }
+
+  const price = parseInt(document.getElementById('af-price').value)||0;
+  const desc = document.getElementById('af-desc').value.trim();
+  const thumbUrl = document.getElementById('af-thumb-url').value.trim();
+  const emoji = document.getElementById('af-emoji').value.trim() || '📦';
+  const available = document.getElementById('af-available').value==='true';
+  const specs = [...document.querySelectorAll('.spec-input')].map(i=>i.value.trim()).filter(Boolean);
+
+  if (editingId!==null) {
+    const idx = PRODUCTS.findIndex(p=>p.id===editingId);
+    if (idx!==-1) {
+      PRODUCTS[idx] = {...PRODUCTS[idx], name, category, price, description:desc, thumbnail:thumbUrl, icon:emoji, available, specs};
+      showToast('Product updated!');
+    }
+    editingId=null;
+  } else {
+    const newId = Math.max(0,...PRODUCTS.map(p=>p.id))+1;
+    PRODUCTS.push({ id:newId, name, category, price, description:desc, thumbnail:thumbUrl, icon:emoji, available, specs });
+    showToast('Product added!');
+  }
+  saveProducts();
+  resetAddForm();
+  showAdminSection('products');
+}
+
+/* ── Toast ── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2800);
+}
+
+/* ── Nav toggle ── */
+function toggleNav() { document.getElementById('nav').classList.toggle('open'); }
+
+/* ── Init ── */
+showPage('home');
+</script>
+</body>
+</html>
